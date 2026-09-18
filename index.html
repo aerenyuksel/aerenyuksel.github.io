@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmet Eren Yüksel | Portfolyo</title>
-  <style>
+    <style>
         /* Siyah/Karanlık Tema Estetiği */
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
@@ -14,33 +14,39 @@
             padding: 0; 
             line-height: 1.6; 
         }
+        
+        /* İŞTE KUTUYU KIRDIĞIMIZ YER: max-width kalktı, ekranın %92'sini boydan boya kaplayacak */
         .container { 
-            max-width: 800px; 
+            width: 92%; 
             margin: 0 auto; 
-            padding: 60px 20px; 
+            padding: 40px 0; 
         }
         
-        /* HİZALAMA DÜZELTİLDİ: İsim solda, buton tam sağda, çizgi boydan boya */
+        /* Çizgi artık ekranı baştan başa kesecek */
         header {
             border-bottom: 1px solid #444; 
-            padding-bottom: 25px;
+            padding-bottom: 30px;
             margin-bottom: 40px;
         }
+        
         .header-top {
             display: flex;
-            justify-content: space-between;
-            align-items: center; /* İsim ve butonu aynı dikey hizada tutar */
-            margin-bottom: 15px;
+            justify-content: space-between; /* İsim bloğunu en sola, butonu en sağa iter */
+            align-items: flex-start;
+        }
+        
+        .header-left {
+            max-width: 80%; /* Yazılar ekranın büyük kısmını kullanır */
         }
         
         h1 { 
-            font-size: 2.5rem; 
-            margin: 0; 
+            font-size: 2.8rem; 
+            margin: 0 0 5px 0; 
             color: #ffffff; 
             letter-spacing: -0.5px;
         }
         h2 { 
-            font-size: 1.2rem; 
+            font-size: 1.3rem; 
             color: #8e8e93; 
             font-weight: 400; 
             margin: 0 0 15px 0; 
@@ -48,29 +54,34 @@
         p.bio {
             margin: 0;
             color: #cccccc;
-            max-width: 100%; /* Yazı artık tamamen sola yaslı ve tüm alanı kullanıyor */
+            font-size: 1.05rem;
         }
         
         .linkedin-btn {
-            padding: 8px 18px;
+            display: inline-block;
+            padding: 10px 24px;
             background-color: #0077b5;
             color: #ffffff;
             text-decoration: none;
             border-radius: 6px;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 1rem;
             transition: 0.2s;
             white-space: nowrap;
+            margin-top: 10px;
         }
         .linkedin-btn:hover {
             background-color: #005885;
         }
         
-        @media (max-width: 600px) {
+        /* Telefondan girilirse tasarım bozulmasın diye */
+        @media (max-width: 768px) {
             .header-top {
                 flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
+                gap: 20px;
+            }
+            .header-left {
+                max-width: 100%;
             }
         }
         
@@ -91,13 +102,19 @@
 </head>
 <body>
     <div class="container">
-       <header>
+        <header>
             <div class="header-top">
-                <h1>Ahmet Eren Yüksel</h1>
-                <a href="https://www.linkedin.com/in/ahmet-eren-y%C3%BCksel-51b827353/" class="linkedin-btn">LinkedIn</a>
+                <!-- İsim ve açıklamalar en solda -->
+                <div class="header-left">
+                    <h1>Ahmet Eren Yüksel</h1>
+                    <h2>İktisat Öğrencisi & Süreç Analisti</h2>
+                    <p class="bio">Dokuz Eylül Üniversitesi İktisat bölümü lisans öğrencisiyim. Makroekonomi, veri analizi ve finansal sistem otomasyonlarına ilgi duyuyorum. Analitik düşünce yapısıyla süreçleri dijitalleştiriyor ve yönetiyorum.</p>
+                </div>
+                <!-- Buton en sağda -->
+                <div class="header-right">
+                    <a href="https://www.linkedin.com/in/ahmet-eren-y%C3%BCksel-51b827353/" class="linkedin-btn">LinkedIn</a>
+                </div>
             </div>
-            <h2>İktisat Öğrencisi & Süreç Analisti</h2>
-            <p class="bio">Dokuz Eylül Üniversitesi İktisat bölümü lisans öğrencisiyim. Makroekonomi, veri analizi ve finansal sistem otomasyonlarına ilgi duyuyorum. Analitik düşünce yapısıyla süreçleri dijitalleştiriyor ve yönetiyorum.</p>
         </header>
 
         <section>
@@ -135,7 +152,7 @@
         
         <section>
             <h3>Araçlar & Yetkinlikler</h3>
-            <p>Veri Görselleştirme, Bireysel Finans Otomasyonları (Google Sheets & API), İngilizce (A2-B1), MacOS/iOS Ekosistem Mimarisi.</p>
+            <p style="color: #cccccc;">Veri Görselleştirme, Bireysel Finans Otomasyonları (Google Sheets & API), İngilizce (A2-B1), MacOS/iOS Ekosistem Mimarisi.</p>
         </section>
     </div>
 </body>
