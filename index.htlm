@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmet Eren Yüksel | Portfolyo</title>
+    <style>
+        /* Siyah/Karanlık Tema Estetiği */
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            background-color: #121212; 
+            color: #e0e0e0; 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.6; 
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 60px 20px; 
+        }
+        h1 { 
+            font-size: 2.5rem; 
+            margin-bottom: 5px; 
+            color: #ffffff; 
+            letter-spacing: -0.5px;
+        }
+        h2 { 
+            font-size: 1.2rem; 
+            color: #8e8e93; 
+            font-weight: 400; 
+            margin-top: 0; 
+            margin-bottom: 40px; 
+        }
+        h3 { 
+            font-size: 1.5rem;
+            color: #ffffff; 
+            border-bottom: 1px solid #333; 
+            padding-bottom: 10px; 
+            margin-top: 50px; 
+            margin-bottom: 25px;
+        }
+        .item { 
+            margin-bottom: 30px; 
+        }
+        .item-title { 
+            font-weight: 600; 
+            font-size: 1.2rem; 
+            color: #ffffff; 
+        }
+        .item-meta { 
+            color: #8e8e93; 
+            font-size: 0.95rem; 
+            margin-bottom: 8px; 
+        }
+        .item-desc { 
+            color: #cccccc; 
+            font-size: 0.95rem;
+        }
+        .highlight {
+            color: #30d158; /* Apple Yeşili Vurgu */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ahmet Eren Yüksel</h1>
+            <h2>İktisat Öğrencisi & Süreç Analisti</h2>
+            <p>Dokuz Eylül Üniversitesi İktisat bölümü lisans öğrencisiyim. Makroekonomi, veri analizi ve finansal sistem otomasyonlarına ilgi duyuyorum. Analitik düşünce yapısıyla süreçleri dijitalleştiriyor ve yönetiyorum.</p>
+        </header>
+
+        <section>
+            <h3>Profesyonel Deneyim</h3>
+            <div class="item">
+                <div class="item-title">Yaz Stajyeri</div>
+                <div class="item-meta">Gelir İdaresi Başkanlığı | Temmuz - Ağustos 2026</div>
+                <div class="item-desc">Kamu finansmanı, vergi dairesi işleyişi ve muhasebe operasyonlarının doğrudan gözlemlenmesi ve raporlanması süreçlerinde aktif rol aldım.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">İdari Destek Personeli</div>
+                <div class="item-meta">DEÜ Toplumsal Katkı Koordinatörlüğü & İİBF Proje Birimi | Şubat - Mayıs 2026</div>
+                <div class="item-desc">Kurum içi operasyonların yönetilmesi ve resmi üniversite projelerinde idari destek süreçlerinin yürütülmesi.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Ön Büro ve Ön Muhasebe Asistanı</div>
+                <div class="item-meta">Aile Şirketi | Dönemsel</div>
+                <div class="item-desc">Araç filosu lojistik organizasyonu ve temel işletme ön muhasebe operasyonlarının takibi.</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Projeler & Liderlik</h3>
+            <div class="item">
+                <div class="item-title">RYLA Liderlik Semineri</div>
+                <div class="item-meta">Rotary & TEV İşbirliği | Çeşme, Nisan 2026</div>
+                <div class="item-desc">Takım çalışması, liderlik ve kriz yönetimi odaklı ileri düzey interaktif seminer programı katılımı.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Çevresel Etki ve Farkındalık Konferansı</div>
+                <div class="item-meta">DEÜ İİBF | Aralık 2025</div>
+                <div class="item-desc">İzmarit kirliliğinin ekolojik ve ekonomik maliyeti üzerine <span class="highlight">~300 kişilik</span> bir kitleye verilen kapsamlı farkındalık sunumu.</div>
+            </div>
+        </section>
+        
+        <section>
+            <h3>Araçlar & Yetkinlikler</h3>
+            <p>Veri Görselleştirme, Bireysel Finans Otomasyonları (Google Sheets & API), İngilizce (A2-B1), MacOS/iOS Ekosistem Mimarisi.</p>
+        </section>
+    </div>
+</body>
+</html>
