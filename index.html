@@ -15,13 +15,17 @@
             line-height: 1.6; 
         }
         
-        /* ÜST KISIM: Ekranı boydan boya kaplar */
-        .header-container {
+        /* TEK VE GENİŞ KUTU: Başlık, çizgi ve içerik artık aynı dikey çizgiden (en soldan) başlar */
+        .container {
             width: 92%; 
             max-width: 1200px;
             margin: 0 auto; 
-            padding: 50px 0 30px 0; 
-            border-bottom: 1px solid #444; /* Ekranı kesen boydan boya çizgi */
+            padding: 50px 0 60px 0;
+        }
+        
+        header {
+            border-bottom: 1px solid #444; 
+            padding-bottom: 30px;
             margin-bottom: 40px;
         }
         
@@ -70,11 +74,9 @@
             background-color: #005885;
         }
         
-        /* ALT KISIM: İçerikler ortada toplanır ve daha derli toplu durur */
-        .content-container {
-            max-width: 800px; /* Okunabilirliği artıran dar kutu */
-            margin: 0 auto;
-            padding: 0 20px 60px 20px;
+        /* İÇERİK KISMI: Tamamen sola yaslı, okuması kolay olsun diye satırlar çok uzamasın */
+        .content-section {
+            max-width: 900px; 
         }
 
         h3 { 
@@ -87,7 +89,7 @@
         }
         .item { margin-bottom: 25px; }
         
-        /* Fontlar istediğin gibi bir tık küçültüldü ve kibarlaştırıldı */
+        /* Font boyutları senin beğendiğin gibi küçük ve profesyonel bırakıldı */
         .item-title { font-weight: 600; font-size: 1.15rem; color: #ffffff; }
         .item-meta { color: #8e8e93; font-size: 0.9rem; margin-bottom: 5px; }
         .item-desc { color: #cccccc; font-size: 0.9rem; }
@@ -106,60 +108,63 @@
     </style>
 </head>
 <body>
-    <!-- GENİŞ ÜST BÖLÜM -->
-    <header class="header-container">
-        <div class="header-top">
-            <div class="header-left">
-                <h1>Ahmet Eren Yüksel</h1>
-                <h2>İktisat Öğrencisi & Süreç Analisti</h2>
-                <p class="bio">Dokuz Eylül Üniversitesi İktisat bölümü lisans öğrencisiyim. Makroekonomi, veri analizi ve finansal sistem otomasyonlarına ilgi duyuyorum. Analitik düşünce yapısıyla süreçleri dijitalleştiriyor ve yönetiyorum.</p>
-            </div>
-            <div class="header-right">
-                <a href="https://www.linkedin.com/in/ahmet-eren-y%C3%BCksel-51b827353/" class="linkedin-btn">LinkedIn</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- ORTALANMIŞ ALT BÖLÜM -->
-    <main class="content-container">
-        <section>
-            <h3>Profesyonel Deneyim</h3>
-            <div class="item">
-                <div class="item-title">Yaz Stajyeri</div>
-                <div class="item-meta">Gelir İdaresi Başkanlığı | Temmuz - Ağustos 2026</div>
-                <div class="item-desc">Kamu finansmanı, vergi dairesi işleyişi ve muhasebe operasyonlarının doğrudan gözlemlenmesi ve raporlanması süreçlerinde aktif rol aldım.</div>
-            </div>
-            <div class="item">
-                <div class="item-title">İdari Destek Personeli</div>
-                <div class="item-meta">DEÜ Toplumsal Katkı Koordinatörlüğü | Aralık 2025 - Mayıs 2026</div>
-                <div class="item-desc">Kurum içi operasyonların yönetilmesi ve resmi üniversite projelerinde idari destek süreçlerinin yürütülmesi.</div>
-            </div>
-            <div class="item">
-                <div class="item-title">İdari Destek Personeli</div>
-                <div class="item-meta">İİBF Proje Birimi | Kasım 2024 - Mayıs 2025</div>
-                <div class="item-desc">Fakülte bünyesinde yürütülen akademik ve kurumsal projelerin dokümantasyonu, operasyonel takibi ve veri koordinasyonu süreçlerinde idari destek sağladım.</div>
-            </div>
-        </section>
-
-        <section>
-            <h3>Projeler & Liderlik</h3>
-            <div class="item">
-                <div class="item-title">RYLA Liderlik Semineri</div>
-                <div class="item-meta">Rotary & TEV İşbirliği | Çeşme, Nisan 2026</div>
-                <div class="item-desc">Takım çalışması, liderlik ve kriz yönetimi odaklı ileri düzey interaktif seminer programı katılımı.</div>
-            </div>
-            <div class="item">
-                <div class="item-title">Çevresel Etki ve Farkındalık Konferansı</div>
-                <div class="item-meta">DEÜ İİBF | Aralık 2025</div>
-                <div class="item-desc">İzmarit kirliliğinin ekolojik ve ekonomik maliyeti üzerine <span class="highlight">~300 kişilik</span> bir kitleye verilen kapsamlı farkındalık sunumu.</div>
-            </div>
-        </section>
+    <!-- Her şey tek bir 'container' içinde toplandı -->
+    <div class="container">
         
-        <section>
-            <h3>Araçlar & Yetkinlikler</h3>
-            <!-- Araçlar kısmının fontu da alt kısımla uyumlu olsun diye küçültüldü -->
-            <p style="color: #cccccc; font-size: 0.9rem;">Veri Görselleştirme, Bireysel Finans Otomasyonları (Google Sheets & API), İngilizce (A2-B1), MacOS/iOS Ekosistem Mimarisi.</p>
-        </section>
-    </main>
+        <header>
+            <div class="header-top">
+                <div class="header-left">
+                    <h1>Ahmet Eren Yüksel</h1>
+                    <h2>İktisat Öğrencisi & Süreç Analisti</h2>
+                    <p class="bio">Dokuz Eylül Üniversitesi İktisat bölümü lisans öğrencisiyim. Makroekonomi, veri analizi ve finansal sistem otomasyonlarına ilgi duyuyorum. Analitik düşünce yapısıyla süreçleri dijitalleştiriyor ve yönetiyorum.</p>
+                </div>
+                <div class="header-right">
+                    <a href="https://www.linkedin.com/in/ahmet-eren-y%C3%BCksel-51b827353/" class="linkedin-btn">LinkedIn</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- İçerik artık merkezde değil, başlıkla aynı hizada soldan başlıyor -->
+        <main class="content-section">
+            <section>
+                <h3>Profesyonel Deneyim</h3>
+                <div class="item">
+                    <div class="item-title">Yaz Stajyeri</div>
+                    <div class="item-meta">Gelir İdaresi Başkanlığı | Temmuz - Ağustos 2026</div>
+                    <div class="item-desc">Kamu finansmanı, vergi dairesi işleyişi ve muhasebe operasyonlarının doğrudan gözlemlenmesi ve raporlanması süreçlerinde aktif rol aldım.</div>
+                </div>
+                <div class="item">
+                    <div class="item-title">İdari Destek Personeli</div>
+                    <div class="item-meta">DEÜ Toplumsal Katkı Koordinatörlüğü | Aralık 2025 - Mayıs 2026</div>
+                    <div class="item-desc">Kurum içi operasyonların yönetilmesi ve resmi üniversite projelerinde idari destek süreçlerinin yürütülmesi.</div>
+                </div>
+                <div class="item">
+                    <div class="item-title">İdari Destek Personeli</div>
+                    <div class="item-meta">İİBF Proje Birimi | Kasım 2024 - Mayıs 2025</div>
+                    <div class="item-desc">Fakülte bünyesinde yürütülen akademik ve kurumsal projelerin dokümantasyonu, operasyonel takibi ve veri koordinasyonu süreçlerinde idari destek sağladım.</div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Projeler & Liderlik</h3>
+                <div class="item">
+                    <div class="item-title">RYLA Liderlik Semineri</div>
+                    <div class="item-meta">Rotary & TEV İşbirliği | Çeşme, Nisan 2026</div>
+                    <div class="item-desc">Takım çalışması, liderlik ve kriz yönetimi odaklı ileri düzey interaktif seminer programı katılımı.</div>
+                </div>
+                <div class="item">
+                    <div class="item-title">Çevresel Etki ve Farkındalık Konferansı</div>
+                    <div class="item-meta">DEÜ İİBF | Aralık 2025</div>
+                    <div class="item-desc">İzmarit kirliliğinin ekolojik ve ekonomik maliyeti üzerine <span class="highlight">~300 kişilik</span> bir kitleye verilen kapsamlı farkındalık sunumu.</div>
+                </div>
+            </section>
+            
+            <section>
+                <h3>Araçlar & Yetkinlikler</h3>
+                <p style="color: #cccccc; font-size: 0.9rem;">Veri Görselleştirme, Bireysel Finans Otomasyonları (Google Sheets & API), İngilizce (A2-B1), MacOS/iOS Ekosistem Mimarisi.</p>
+            </section>
+        </main>
+        
+    </div>
 </body>
 </html>
