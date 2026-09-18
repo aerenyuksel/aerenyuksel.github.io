@@ -19,9 +19,21 @@
             margin: 0 auto; 
             padding: 60px 20px; 
         }
+        /* Yeni Üst Kısım (Header) Tasarımı */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 1px solid #444; /* Senin istediğin o alt çizgi */
+            padding-bottom: 25px;
+            margin-bottom: 40px;
+        }
+        .header-content {
+            max-width: 75%;
+        }
         h1 { 
             font-size: 2.5rem; 
-            margin-bottom: 5px; 
+            margin: 0 0 5px 0; 
             color: #ffffff; 
             letter-spacing: -0.5px;
         }
@@ -29,47 +41,65 @@
             font-size: 1.2rem; 
             color: #8e8e93; 
             font-weight: 400; 
-            margin-top: 0; 
-            margin-bottom: 40px; 
+            margin: 0 0 15px 0; 
         }
+        p.bio {
+            margin: 0;
+            color: #cccccc;
+        }
+        .linkedin-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0077b5;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.2s;
+            white-space: nowrap;
+        }
+        .linkedin-btn:hover {
+            background-color: #005885;
+        }
+        /* Telefondan girilirse alt alta düzgün görünsün diye */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            .header-content {
+                max-width: 100%;
+            }
+        }
+        
         h3 { 
             font-size: 1.5rem;
             color: #ffffff; 
             border-bottom: 1px solid #333; 
             padding-bottom: 10px; 
-            margin-top: 50px; 
+            margin-top: 10px; 
             margin-bottom: 25px;
         }
-        .item { 
-            margin-bottom: 30px; 
-        }
-        .item-title { 
-            font-weight: 600; 
-            font-size: 1.2rem; 
-            color: #ffffff; 
-        }
-        .item-meta { 
-            color: #8e8e93; 
-            font-size: 0.95rem; 
-            margin-bottom: 8px; 
-        }
-        .item-desc { 
-            color: #cccccc; 
-            font-size: 0.95rem;
-        }
-        .highlight {
-            color: #30d158; /* Apple Yeşili Vurgu */
-            font-weight: 600;
-        }
+        .item { margin-bottom: 30px; }
+        .item-title { font-weight: 600; font-size: 1.2rem; color: #ffffff; }
+        .item-meta { color: #8e8e93; font-size: 0.95rem; margin-bottom: 8px; }
+        .item-desc { color: #cccccc; font-size: 0.95rem; }
+        .highlight { color: #30d158; font-weight: 600; }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Ahmet Eren Yüksel</h1>
-            <h2>İktisat Öğrencisi & Süreç Analisti</h2>
-            <p>Dokuz Eylül Üniversitesi İktisat bölümü lisans öğrencisiyim. Makroekonomi, veri analizi ve finansal sistem otomasyonlarına ilgi duyuyorum. Analitik düşünce yapısıyla süreçleri dijitalleştiriyor ve yönetiyorum.</p>
-        <a href="https://www.linkedin.com/in/Ahmet Eren Yüksel" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background-color: #0077b5; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.95rem;">LinkedIn Profilim</a>
+            <div class="header-content">
+                <h1>Ahmet Eren Yüksel</h1>
+                <h2>İktisat Öğrencisi & Süreç Analisti</h2>
+                <p class="bio">Dokuz Eylül Üniversitesi İktisat bölümü lisans öğrencisiyim. Makroekonomi, veri analizi ve finansal sistem otomasyonlarına ilgi duyuyorum. Analitik düşünce yapısıyla süreçleri dijitalleştiriyor ve yönetiyorum.</p>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/in/ahmet-eren-y%C3%BCksel-51b827353/" class="linkedin-btn">LinkedIn</a>
+            </div>
         </header>
 
         <section>
